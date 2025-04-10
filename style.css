@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1601134467661-3f4367eecb1f?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-overlay {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  animation: fadeSlideUp 1s ease;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow {
+  font-size: 2.8em;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+  margin-bottom: 15px;
+}
+
+.event-name {
+  font-size: 1.6em;
+  color: #ffe082;
+}
+
+.event-tagline {
+  font-size: 1.1em;
+  color: #eee;
+  margin: 10px 0 20px;
+}
+
+.info-grid {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.countdown {
+  margin: 20px 0;
+}
+
+#timer {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #90ee90;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+form input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+}
+
+form button {
+  background: linear-gradient(135deg, #ff007f, #ff6f61);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+#rsvp-message {
+  margin-top: 10px;
+  color: #00ffb3;
+  display: none;
+}
+
+.share-btn {
+  margin-top: 20px;
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #1ebc59;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .glow {
+    font-size: 2em;
+  }
+
+  .invitation-card {
+    padding: 25px;
+  }
+}

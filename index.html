@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exclusive Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-overlay">
+    <div class="invitation-card animate-in">
+      <h1 class="glow">You're Invited!</h1>
+      <p class="event-name">🎉 Mega Celebration Night</p>
+      <p class="event-tagline">Let’s make memories that last forever!</p>
+
+      <div class="info-grid">
+        <div><strong>Date:</strong> April 20, 2025</div>
+        <div><strong>Time:</strong> 7:00 PM onwards</div>
+        <div><strong>Venue:</strong> The Royal Garden, Celebration Avenue</div>
+      </div>
+
+      <div class="countdown">
+        <p>Event Starts In:</p>
+        <div id="timer">Loading...</div>
+      </div>
+
+      <form id="rsvp-form" onsubmit="handleRSVP(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <button type="submit">Confirm RSVP</button>
+      </form>
+      <p id="rsvp-message" class="fade-in"></p>
+
+      <a class="share-btn" href="https://wa.me/?text=You're%20invited%20to%20our%20event!%20Join%20us%20on%20April%2020%20at%20The%20Royal%20Garden!" target="_blank">
+        Share via WhatsApp
+      </a>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.357284625213!2d73.93034511517689!3d18.562427787385074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1fbd3836933%3A0x5e50b6b1f40134aa!2sSome%20Location!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
